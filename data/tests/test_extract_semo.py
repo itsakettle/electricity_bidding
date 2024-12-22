@@ -1,7 +1,6 @@
 import shutil
 import pytest
 import polars as pl
-from datetime import datetime
 from grid_data import extract_semo
 
 SAMPLE_SEMO_XML = """
