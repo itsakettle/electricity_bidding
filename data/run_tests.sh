@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose up --build --force-recreate --no-log-prefix
+docker-compose up test --build --force-recreate --no-log-prefix
