@@ -12,7 +12,7 @@ module "extract_semo" {
   source = "./extract_semo"
   env = var.env
   aws_region = var.aws_region
-  lambda_s3_bucket_info = local.lambda_s3_bucket_info
+  s3_bucket_details = local.s3_bucket_details
 }
 
 
