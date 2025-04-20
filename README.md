@@ -1,5 +1,7 @@
 # grid-data-irl
 
+
+# Commands
 `terraform plan`
 `terraform apply`
 `docker-compose up`

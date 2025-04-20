@@ -24,7 +24,7 @@ resource "aws_iam_role" "lambda_exec_ecr_and_s3" {
       Action = "sts:AssumeRole"
       Effect = "Allow"
       Sid    = ""
-      # This says that only lambda service can assume this role
+      
       Principal = {
         Service = "lambda.amazonaws.com"
       }
@@ -45,7 +45,6 @@ resource "aws_iam_policy" "lambda_ecr_policy" {
 
   policy = jsonencode({
     Version = "2012-10-17"
-    # I wonder is it better to have a single policy with dynamo and lambda execute.
     Statement = [
       {
         "Effect": "Allow",
@@ -76,7 +75,6 @@ resource "aws_iam_policy" "lambda_s3_policy" {
 
   policy = jsonencode({
     Version = "2012-10-17"
-    # I wonder is it better to have a single policy with dynamo and lambda execute.
     Statement = [
       {
         Effect   = "Allow"
